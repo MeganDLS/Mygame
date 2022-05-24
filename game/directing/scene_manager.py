@@ -196,28 +196,28 @@ class SceneManager:
 
     def _add_dialog(self, cast, message):
         cast.clear_actors(DIALOG_GROUP)
-        text = Text(message, FONT_FILE, FONT_SMALL, ALIGN_CENTER)
+        text = Text(message, FONT_SERIF, FONT_SMALL, ALIGN_CENTER)
         position = Point(CENTER_X, CENTER_Y)
         label = Label(text, position)
         cast.add_actor(DIALOG_GROUP, label)
 
     def _add_level(self, cast):
         cast.clear_actors(LEVEL_GROUP)
-        text = Text(LEVEL_FORMAT, FONT_FILE, FONT_SMALL, ALIGN_LEFT)
+        text = Text(LEVEL_FORMAT, FONT_SERIF, FONT_SMALL, ALIGN_LEFT)
         position = Point(HUD_MARGIN, HUD_MARGIN)
         label = Label(text, position)
         cast.add_actor(LEVEL_GROUP, label)
 
     def _add_lives(self, cast):
         cast.clear_actors(LIVES_GROUP)
-        text = Text(LIVES_FORMAT, FONT_FILE, FONT_SMALL, ALIGN_RIGHT)
+        text = Text(LIVES_FORMAT, FONT_SERIF, FONT_SMALL, ALIGN_RIGHT)
         position = Point(SCREEN_WIDTH - HUD_MARGIN, HUD_MARGIN)
         label = Label(text, position)
         cast.add_actor(LIVES_GROUP, label)
 
     def _add_score(self, cast):
         cast.clear_actors(SCORE_GROUP)
-        text = Text(SCORE_FORMAT, FONT_FILE, FONT_SMALL, ALIGN_CENTER)
+        text = Text(SCORE_FORMAT, FONT_SERIF, FONT_SMALL, ALIGN_CENTER)
         position = Point(CENTER_X, HUD_MARGIN)
         label = Label(text, position)
         cast.add_actor(SCORE_GROUP, label)

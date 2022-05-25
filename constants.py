@@ -31,6 +31,7 @@ FONT_SCRIPT = "assets\\fonts\\Sacramento-Regular.ttf"
 BOUNCE_SOUND = "assets\\sounds\\ice.wav"
 WELCOME_SOUND = "assets\\sounds\\splash.wav"
 OVER_SOUND = "assets\\sounds\\bubbles.wav"
+MUSIC = "assets\\sounds\\happyfeet.mp3"
 
 # TEXT
 ALIGN_CENTER = 0

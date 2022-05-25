@@ -50,6 +50,8 @@ TAN = Color(255, 205, 178)
 # KEYS
 LEFT = "left"
 RIGHT = "right"
+UP = "up"
+DOWN = "down"
 SPACE = "space"
 ENTER = "enter"
 PAUSE = "p"

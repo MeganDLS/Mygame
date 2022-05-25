@@ -52,7 +52,39 @@ class Ball(Actor):
             An instance of Image.
         """
         return self._image
+
+    # def move_next(self):
+    #     """Moves the bat using its velocity."""
+    #     position = self._body.get_position()
+    #     velocity = self._body.get_velocity()
+    #     new_position = position.add(velocity)
+    #     self._body.set_position(new_position)   
+
+    # def swing_left(self):
+    #     """Steers the bat to the left."""
+    #     velocity = Point(-RACKET_VELOCITY, 0)
+    #     self._body.set_velocity(velocity)
         
+    # def swing_right(self):
+    #     """Steers the bat to the right."""
+    #     velocity = Point(RACKET_VELOCITY, 0)
+    #     self._body.set_velocity(velocity)
+
+    # def swing_up(self):
+    #     """Steers the bat to the left."""
+    #     velocity = Point(0, -RACKET_VELOCITY)
+    #     self._body.set_velocity(velocity)
+        
+    # def swing_down(self):
+    #     """Steers the bat to the right."""
+    #     velocity = Point(0, RACKET_VELOCITY)
+    #     self._body.set_velocity(velocity)
+
+    # def stop_moving(self):
+    #     """Stops the bat from moving."""
+    #     velocity = Point(0, 0)
+    #     self._body.set_velocity(velocity)
+    
     def release(self):
         """Release the ball in a random direction."""
         rn = random.uniform(0.9, 1.1)

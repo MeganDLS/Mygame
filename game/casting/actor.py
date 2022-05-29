@@ -1,3 +1,5 @@
+"""
+"""
 from constants import *
 from game.shared.color import Color
 from game.shared.point import Point
@@ -6,8 +8,7 @@ from game.shared.point import Point
 class Actor:
     """A visible, moveable thing that participates in the game. 
     
-    The responsibility of Actor is to keep track of its appearance, position and velocity in 2d 
-    space.
+    The responsibility of Actor is to keep track of its appearance, position and velocity
     Attributes:
         _text (string): The text to display
         _font_size (int): The font size to use.

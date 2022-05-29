@@ -1,3 +1,5 @@
+"""
+"""
 from constants import *
 from game.casting.actor import Actor
 from game.shared.point import Point
@@ -21,7 +23,7 @@ class Penguin(Actor):
         return self._image
     
     def move_next(self):
-        'Moves the penguin.'
+        """Moves the penguin."""
         position = self.get_position()
         velocity = self.get_velocity()
         new_position = position.add(velocity)

@@ -1,5 +1,5 @@
-
-from ast import Not
+"""
+"""
 from constants import *
 from game.scripting.action import Action
 from game.shared.point import Point

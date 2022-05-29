@@ -47,7 +47,6 @@ def main():
     cast.add_actor("Ice", Ice(ICEAA, 700, 100, 1))    
     cast.add_actor("Ice", Ice(ICEBB, 300, 200, -4))
     cast.add_actor("Ice", Ice(ICEBB, 100, 200, -4))
-    # cast.add_actor("Ice", Ice(ICEBB, 400, 200, -4))
     cast.add_actor("Ice", Ice(ICEBB, 500, 200, -4))
     cast.add_actor("Ice", Ice(ICECC, 100, 300, 2))
     cast.add_actor("Ice", Ice(ICECC, 300, 300, 2))

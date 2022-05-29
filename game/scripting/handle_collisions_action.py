@@ -58,7 +58,6 @@ class HandleCollisionsAction(Action):
             
         for ice in icee:
             if ice.get_position().equals(penguin.get_position()):
-                #remove a life
                 life.remove_life()
                 PlayMusicStream(WELCOME_SOUND)
 
@@ -71,6 +70,8 @@ class HandleCollisionsAction(Action):
 
 
     def _handle_winner(self, cast):
+        """When the penguin reaches a cheese dibble and where to show the message
+        """
         if self._winner:
             message = Actor()
             message.set_text("Yum!")
@@ -88,7 +89,7 @@ class HandleCollisionsAction(Action):
         if self._loser:
             message = Actor()
             message.set_text("Try Again!")
-            message.set_color = GREEN
+            message.set_color = BLACK
             position = Point(MAX_X/2, MAX_Y/2)
             message.set_position(position)
             cast.add_actor("Message", message)

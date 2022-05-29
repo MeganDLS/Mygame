@@ -1,4 +1,5 @@
-from game.casting.penguin import Penguin
+"""
+"""
 from game.scripting.action import Action
 
 
@@ -32,10 +33,8 @@ class DrawActorsAction(Action):
         score = cast.get_first_actor("Score")
         lives = cast.get_first_actor("Lives")
         messages = cast.get_actors("Message")
-
         self._video_service.clear_buffer()
-        
-        # self._video_service.draw_image(dibble)
+
         for dib in dibble:
             self._video_service.draw_image(dib)
         self._video_service.draw_actors([score])

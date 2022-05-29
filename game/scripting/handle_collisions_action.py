@@ -96,9 +96,13 @@ class HandleCollisionsAction(Action):
 
 
     def get_is_game_over(self):
+        """
+        """
         return self._is_game_over
 
     def get_is_winner(self):
+        """
+        """
         return self._winner
 
     

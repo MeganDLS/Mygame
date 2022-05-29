@@ -1,3 +1,5 @@
+"""
+"""
 import pyray
 from constants import *
 from pathlib import Path
@@ -6,9 +8,6 @@ from pathlib import Path
 # ROOTDIR = Path(__file__).parent
 # #Calling the div operator to concatenate - works on linux mac and windows.
 # ASSETSDIR = ROOTDIR / "assets"
-
-
-
 class VideoService:
     """Outputs the game state. The responsibility of the class of objects is to draw the game state 
     on the screen. 
@@ -44,6 +43,7 @@ class VideoService:
         """Draws the given actor's text on the screen.
         Args:
             actor (Actor): The actor to draw.
+            Boolean
         """ 
         text = actor.get_text()
         x = actor.get_position().get_x()
@@ -67,11 +67,13 @@ class VideoService:
             self.draw_actor(actor, centered)
 
     def draw_image(self, actor):
+        """ Gets the image from the file
+        Args: Actor
+        """
         filepath = actor._image
         # fixed os dependent filepath
         filepath = str(pathlib.Path(filepath))
         texture = pyray.load_texture(filepath)
-
 
         x = actor.get_position().get_x()
         y = actor.get_position().get_y()
@@ -81,6 +83,10 @@ class VideoService:
         pyray.draw_texture_ex(texture, raylib_position, 0, 1, WHITE.to_tuple())
 
     def load_images(self, directory):
+        """ loads with a directory
+        Args:
+        Directory
+        """
         filepaths = self._get_filepaths(directory, [".png", ".gif", ".jpg", ".jpeg", ".bmp"])
         for filepath in filepaths:
             if filepath not in self._textures.keys():
@@ -118,7 +124,8 @@ class VideoService:
             pyray.draw_line(x, 0, x, MAX_Y, pyray.WHITE)
 
     def _draw_edges(self):
-        """Draws the lanes on the road."""        
+        """Draws the lanes on the road.
+        """        
         pyray.draw_line(100, 100, 1100, 100, pyray.RED) 
         pyray.draw_line(100, 200, 1100, 200, pyray.RED)
         pyray.draw_line(100, 300, 1100, 300, pyray.RED)
@@ -138,5 +145,11 @@ class VideoService:
         pyray.draw_line(1100, 100, 1100, 600, pyray.RED)    
 
     def _get_x_offset(self, text, font_size):
+        """
+        for x coordinate
+        Args:
+        text
+        font_size
+        """
         width = pyray.measure_text(text, font_size)
         return int(width / 2)

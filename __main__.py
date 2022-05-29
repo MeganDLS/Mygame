@@ -22,8 +22,9 @@ from game.shared.color import Color
 from game.shared.point import Point
 
 def main():
-
-    #Creates the cast: a penguin, the score, lives and ice chunks
+    """
+    Creates the cast: a penguin, the score, lives and ice chunks
+    """
     cast = Cast()
     cast.add_actor("Penguin", Penguin())
     cast.add_actor("Score", Score(Point(MAX_X-200, 25)))

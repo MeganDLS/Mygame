@@ -1,134 +1,79 @@
-from game.casting.color import Color
+"""
+"""
+import pathlib
+from game.shared.color import Color
 
 # -------------------------------------------------------------------------------------------------- 
 # GENERAL GAME CONSTANTS
 # -------------------------------------------------------------------------------------------------- 
+#Text
+FONT_SIZE = 20
+CAPTION = "Skipper"
 
-# GAME
-GAME_NAME = "Skipper"
-FRAME_RATE = 60
-
-# SCREEN
-SCREEN_WIDTH = 1040
-SCREEN_HEIGHT = 680
-CENTER_X = SCREEN_WIDTH / 2
-CENTER_Y = SCREEN_HEIGHT / 2
-
-# FIELD
-FIELD_TOP = 60
-FIELD_BOTTOM = SCREEN_HEIGHT
-FIELD_LEFT = 0
-FIELD_RIGHT = SCREEN_WIDTH
-
-# FONT
-# FONT_FILE = "assets\\fonts\\zorque.otf"
-FONT_SERIF = "assets\\fonts\\Quicksand-Medium.ttf"
-FONT_SMALL = 32
-FONT_LARGE = 48
-FONT_SCRIPT = "assets\\fonts\\Sacramento-Regular.ttf"
-
-# SOUND
-BOUNCE_SOUND = "assets\\sounds\\ice.wav"
-WELCOME_SOUND = "assets\\sounds\\splash.wav"
-OVER_SOUND = "assets\\sounds\\bubbles.wav"
-MUSIC = "assets\\sounds\\happyfeet.mp3"
-
-# TEXT
-ALIGN_CENTER = 0
-ALIGN_LEFT = 1
-ALIGN_RIGHT = 2
-
-# COLORS
-BLACK = Color(0, 0, 0)
 WHITE = Color(255, 255, 255)
-PURPLE = Color(109, 104, 117)
-MAUVE = Color(181, 131, 141)
-ICE = Color(219, 241, 253)
-PEACH = Color(255, 180, 162)
-TAN = Color(255, 205, 178)
+BLACK = Color(0, 0, 0)
 
-# KEYS
-LEFT = "left"
-RIGHT = "right"
-UP = "up"
-DOWN = "down"
-SPACE = "space"
-ENTER = "enter"
-PAUSE = "p"
+#Sounds
+ICE_SOUND = "assets\\sounds\\boing.wav"
+WELCOME_SOUND = "assets\\sounds\\start.wav"
+OVER_SOUND = "assets\\sounds\\over.wav"
 
-# SCENES
-NEW_GAME = 0
-TRY_AGAIN = 1
-NEXT_LEVEL = 2
-IN_PLAY = 3
-GAME_OVER = 4
+#Grid
+COLUMNS = 9
+ROWS = 6
+CELL_SIZE = 5
 
-# LEVELS
-LEVEL_FILE = "assets\\data\\level-{:03}.txt"
-BASE_LEVELS = 5
-
-# -------------------------------------------------------------------------------------------------- 
-# SCRIPTING CONSTANTS
-# -------------------------------------------------------------------------------------------------- 
-
-# PHASES
-INITIALIZE = 0
-LOAD = 1
-INPUT = 2
-UPDATE = 3
-OUTPUT = 4
-UNLOAD = 5
-RELEASE = 6
+#Screen
+MAX_X = 1200
+MAX_Y = 800
+FRAME_RATE = 15
 
 # -------------------------------------------------------------------------------------------------- 
 # CASTING CONSTANTS
 # -------------------------------------------------------------------------------------------------- 
 
-# STATS
-STATS_GROUP = "stats"
-DEFAULT_LIVES = 3
-MAXIMUM_LIVES = 5
+ICEAA = "assets\\smlice.png"
+ICEBB = "assets\\iceb.png"
+ICECC = "assets\\iceb.png"
 
-# HUD
-HUD_MARGIN = 15
-LEVEL_GROUP = "level"
-LIVES_GROUP = "lives"
-SCORE_GROUP = "score"
-LEVEL_FORMAT = "Skipper"
-LIVES_FORMAT = "Lives: {}"
-SCORE_FORMAT = "Cheezy Dibbles: {}"
+ICETRAIN = [ICEAA, ICEBB, ICECC, ICEAA, ICECC]
 
-# BALL
-BALL_GROUP = "balls"
-BALL_IMAGE = "assets\\images\\smlskipper.png"
-BALL_WIDTH = 28
-BALL_HEIGHT = 28
-BALL_VELOCITY = 6
+PENGUIN = "assets\\smlskipper.png"
+DIBBLE = "assets\\cheeto.png"
 
-# RACKET
-RACKET_GROUP = "rackets"
-RACKET_IMAGES = [f"assets\\images\\{n:03}.png" for n in range(100, 103)]
-RACKET_WIDTH = 106
-RACKET_HEIGHT = 28
-RACKET_RATE = 6
-RACKET_VELOCITY = 7
 
-# BRICK
-BRICK_GROUP = "bricks"
-BRICK_IMAGES = {
-    "b": [f"assets\\images\\{i:03}.png" for i in range(10,19)],
-    "g": [f"assets\\images\\{i:03}.png" for i in range(20,29)],
-    "p": [f"assets\\images\\{i:03}.png" for i in range(30,39)],
-    "y": [f"assets\\images\\{i:03}.png" for i in range(40,49)]
-}
-BRICK_WIDTH = 80
-BRICK_HEIGHT = 28
-BRICK_DELAY = 0.5
-BRICK_RATE = 4
-BRICK_POINTS = 50
 
-# DIALOG
-DIALOG_GROUP = "dialogs"
-ENTER_TO_START = "PRESS ENTER TO START"
-PREP_TO_LAUNCH = "PREPARING FOOD"
-WAS_GOOD_GAME = "GAME OVER"
+
+
+
+
+
+
+
+
+# import pathlib as Path
+# #raylib
+# #Set up an absolute pathto see what the parent directory is
+# # ROOTDIR = Path(__file__).parent
+# #Calling the div operator to concatenate - works on linux mac and windows.
+# # IMAGES = ROOTDIR / "images"
+# # FONTS = ROOTDIR / ASSETSDIR / "fonts"
+# # IMAGES = ROOTDIR / ASSETSDIR / "images"
+
+
+# # SCREEN
+# SCREEN_WIDTH = 1200
+# SCREEN_HEIGHT = 800
+# CENTER_X = SCREEN_WIDTH / 2
+# CENTER_Y = SCREEN_HEIGHT / 2
+
+# # FONT
+# FONT_SERIF = "fonts\\Quicksand-Medium.ttf"
+# FONT_SCRIPT = "fonts/Sacramento-Regular.ttf"
+# FONT_BIG = 50
+
+# SCENE = "images/scene.png"
+
+# TITLE = 0
+# GAMEPLAY = 1
+# END = 2

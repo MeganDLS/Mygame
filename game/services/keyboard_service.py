@@ -1,46 +1,44 @@
+import pyray
+from game.shared.point import Point
+
+
 class KeyboardService:
-    """A keyboard service inteface."""
+    """
+    Watches for a user's input.
+    Responsibility: The Keyboard class listens for a user's key strokes and interprets them to represent a point of direction.
+    Attributes:
+        cell_size (int): the size of a cell on the screen's grid.
+    """
+
+    def __init__(self):
+        """
+        Constructs a new KeyboardService.
+        """
+        self._keys = {}
+        
+        self._keys['left'] = pyray.KEY_LEFT
+        self._keys['right'] = pyray.KEY_RIGHT
+        self._keys['up'] = pyray.KEY_UP
+        self._keys['down'] = pyray.KEY_DOWN
+
+
+    def is_key_up(self, key):
+        """
+        Checks if the given key is currently up.
+        
+        Args:
+            key (string): The given key (left, right, up, down)
+        """
+        pyray_key = self._keys[key.lower()]
+        return pyray.is_key_up(pyray_key)
+        
 
     def is_key_down(self, key):
-        """Detects if the given key is being pressed.
+        """
+        Checks if the given key is currently down.
         
         Args:
-            key: A string containing the key value, e.g. 'a', '0', etc.
-
-        Returns:
-            True if the key is being pressed; false if otherwise.
+            key (string): The given key (left, right, up, down)
         """
-        raise NotImplementedError("not implemented in base class")
-    
-    def is_key_pressed(self, key):
-        """Detects if the given key was pressed once.
-        
-        Args:
-            key: A string containing the key value, e.g. 'a', '0', etc.
-
-        Returns:
-            True if the key was pressed once; false if otherwise.
-        """
-        raise NotImplementedError("not implemented in base class")
-    
-    def is_key_released(self, key):
-        """Detects if the given key was released once.
-        
-        Args:
-            key: A string containing the key value, e.g. 'a', '0', etc.
-
-        Returns:
-            True if the key was released once; false if otherwise.
-        """
-        raise NotImplementedError("not implemented in base class")
-    
-    def is_key_up(self, key):
-        """Detects if the given key is released.
-        
-        Args:
-            key: A string containing the key value, e.g. 'a', '0', etc.
-
-        Returns:
-            True if the key is released; false if otherwise.
-        """
-        raise NotImplementedError("not implemented in base class")
+        pyray_key = self._keys[key.lower()]
+        return pyray.is_key_down(pyray_key)

@@ -14,7 +14,7 @@ class Penguin(Actor):
     def __init__(self):
         super().__init__()
         self._image = PENGUIN
-        self._position = Point(100, 630)
+        self._position = Point(200, 325)
         self._velocity = Point(0, 0)
     
 

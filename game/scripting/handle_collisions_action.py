@@ -1,7 +1,7 @@
 
 """
 """
-from raylib import PlayMusicStream, PlaySound
+# from raylib import PlayMusicStream, PlaySound
 from constants import *
 from game.casting.actor import Actor
 from game.scripting.action import Action
@@ -54,17 +54,17 @@ class HandleCollisionsAction(Action):
         if y <= 100:
             self._winner= True
             self._is_game_over = True
-            PlaySound(ICE_SOUND)
+            # PlaySound(ICE_SOUND)
             
         for ice in icee:
             if ice.get_position().equals(penguin.get_position()):
                 life.remove_life()
-                PlayMusicStream(WELCOME_SOUND)
+                # PlayMusicStream(WELCOME_SOUND)
 
                 if life._lives == 0:
                     self._is_game_over = True
                     self._loser = True
-                    PlaySound(OVER_SOUND)
+                    # PlaySound(OVER_SOUND)
                 position = Point(MAX_X/2, 500)
                 penguin.set_position(position)
 
